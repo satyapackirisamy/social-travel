@@ -1,0 +1,7 @@
+{
+  "name": "Flettra - Social Travel Companion",
+  "description": "A comprehensive social travel platform for buddy finding, ride-sharing with smart expense splitting, AI-powered trip planning, and a travel vendor marketplace.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}

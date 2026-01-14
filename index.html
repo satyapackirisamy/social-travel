@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flettra - Social Travel Companion</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-grad: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+      --accent: #6366f1;
+      --accent-light: #a5b4fc;
+      --bg-soft: #fbfbfe;
+      --card-shadow: 0 20px 50px -12px rgba(99, 102, 241, 0.08);
+      --glass: rgba(255, 255, 255, 0.8);
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      background-color: var(--bg-soft);
+      color: #334155;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .glass-nav { 
+      background: var(--glass); 
+      backdrop-filter: blur(25px); 
+      -webkit-backdrop-filter: blur(25px);
+      border-bottom: 1px solid rgba(238, 242, 255, 0.8);
+    }
+    .glass-mobile-nav {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(25px);
+      border-top: 1px solid rgba(238, 242, 255, 0.8);
+    }
+    .scrollbar-hide::-webkit-scrollbar { display: none; }
+    .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+    
+    .bg-premium-gradient {
+      background: var(--primary-grad);
+    }
+
+    .text-premium-gradient {
+      background: var(--primary-grad);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    .premium-card {
+      background: white;
+      border: 1px solid rgba(238, 242, 255, 0.8);
+      box-shadow: var(--card-shadow);
+      transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      border-radius: 2.5rem;
+    }
+    .premium-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 40px 80px -20px rgba(99, 102, 241, 0.15);
+      border-color: rgba(99, 102, 241, 0.1);
+    }
+
+    .btn-premium {
+      background: var(--primary-grad);
+      color: white;
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 15px 30px -10px rgba(99, 102, 241, 0.4);
+    }
+    .btn-premium:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.6);
+      filter: brightness(1.1);
+    }
+
+    .nav-link-active {
+      color: var(--accent) !important;
+    }
+
+    /* Mobile active indicator */
+    .mobile-active-blob {
+      width: 6px;
+      height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+      position: absolute;
+      bottom: 8px;
+      box-shadow: 0 0 10px rgba(99, 102, 241, 0.5);
+    }
+
+    .trip-card-image {
+      transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .trip-card:hover .trip-card-image {
+      transform: scale(1.12);
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.35.0"
+  }
+}
+</script>
+</head>
+<body class="selection:bg-indigo-100 selection:text-indigo-900">
+  <div id="root"></div>
+</body>
+</html>
